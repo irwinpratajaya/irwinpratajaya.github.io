@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="../style/style.css">
+		<title>Math Basics | irwinpratajaya.github.io</title>
+	</head>
+
+	<body>
+		<!-- Header -->
+		<div class="menu-wrap">
+		<header>
+			<ul>
+				<li><a href="../contact.html"> Contact </a></li>
+				<li><a href="../blog.html"> Blog </a></li>
+				<li><a href="../news.html"> News </a></li>
+				<li><a href="../index.html"> Home </a></li>
+			</ul>
+		</header>
+		</div>
+		<!-- End of Header -->
+
+		<!-- content -->
+		<div class="body">
+			<ol>	
+				<strong><li>
+					<p> Pangkat: 2<sup>3</sup></p>
+				</li></strong>
+				<button onclick="pangkat()">Klik untuk Hasil</button>
+
+				<p id="pangkat"></p>
+
+				<script>
+					function pangkat() {
+						document.getElementById("pangkat").innerHTML = Math.pow(2, 3);
+					}
+				</script>
+
+				<strong><li>
+					<p> Akar 9</p>
+				</li></strong>
+				<button onclick="akar()">Klik untuk Hasil</button>
+
+				<p id="akar"></p>
+
+				<script>
+					function akar() {
+						document.getElementById("akar").innerHTML = Math.sqrt(9);
+					}
+				</script>
+
+				<strong><li>
+					<p> Fungsi Hipotenusa Setiga Siku-Siku ABC</p>
+				</li></strong>
+				<p>
+					a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup> <br>
+					a = 3 <br>
+					b = 4 <br>
+					c = ?
+				</p>
+				<button onclick="hipotenusa()">Klik untuk Hasil</button>
+
+				<p id="hipotenusa"></p>
+
+				<script>
+					function hipotenusa() {
+						var a = 3;
+						var b = 4;
+						var c = (Math.sqrt(Math.pow(a,2)+Math.pow(b,2))) + " cm";
+						console.log(c);
+							document.getElementById("hipotenusa").innerHTML = c;
+					}
+				</script>
+
+				<strong><li>
+					<p> Fungsi Luas Lingkaran</p>
+				</li></strong>
+				<p>
+					Rumus lingkaran = PI x r<sup>2</sup> <br>
+					Jari-jari (r) = 7 
+				</p>
+				<button onclick="lingkaran()">Klik untuk Hasil</button>
+
+				<p id="lingkaran"></p>
+
+				<script>
+					function lingkaran() {
+						var a = 7;
+						var b = (Math.PI * (Math.pow(a,2)));
+						console.log(b);
+							document.getElementById("lingkaran").innerHTML = b;
+					}
+				</script>
+			</ol>
+
+		<!-- End of Content -->
+
+			<div>
+				<footer>
+				<span class="#">&copy Copyright 2016 <a href="https://irwinpratajaya.github.io"> Irwin Pratajaya </a> </span>
+				</footer>
+			</div>
+		</div>
+	</body>
+</html>
