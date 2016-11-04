@@ -1,64 +1,99 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" type="text/css" href="style/style.css">
-		<title>Home | irwinpratajaya.github.io</title>
-	</head>
 
-	<body>
-		<!-- Header -->
-		<div class="menu-wrap">
-		<header>
-			<ul>
-				<li><a href="contact.html"> Contact </a></li>
-				<li><a href="blog.html"> Blog </a></li>
-				<li><a href="news.html"> News </a></li>
-				<li><a href="index.html"> Home </a></li>
-			</ul>
-		</header>
-		</div>
-		<!-- End of Header -->
+<head>
+  <title>Irwin Webpage</title>
+  <link href="stylesheet/style.css" rel="stylesheet" type="text/css">
+</head>
 
-		<!-- content -->
-		<div class="body">
-			<div>
-				<h1>Introduction</h1>
-					<p>Halo, teman - teman <a href="https://hacktiv8.com/">hacktiv8</a>!<br>
-					Perkenalkan saya <b>Irwin Pratajaya</b>, namun biasa dipanggil <b>Irwin</b>. Saya bergabung di <a href="https://hacktiv8.com/">hacktiv8</a> karena tertarik dalam bidang teknologi digital. Saya ingin mempelajari programming, developing website dan aplikasi. Kedepannya saya bercita-cita membangun sebuah e-commerce yang keren, baik dari segi <i>development</i>, <i>user experience</i> dan <i>interface design</i>. Bill Gates adalah idola saya, karena beliau menciptakan <i>operating system</i> yaitu Windows yang digunakan oleh sebagian besar pengguna komputer di dunia sampai saat ini. <br>
-					Untuk mengenal saya lebih lanjut bisa hubungi via email <a href="mailto:irwinpratajaya@gmail.com?Subject=Hi Irwin"> irwinpratajaya@gmail.com </a> <br>
-					<br>
-					Salam kenal! Terima kasih</p>
-			</div>
+<body>
+  <div class="header">
+    <h1>Irwin's Webpage</h1>
+    <h2>Welcome Everyone!</h2>
+  </div>
+  <div class="body">
+    <img src="images/garuda.jpg">
+    <p>Hi, I am Irwin and this is my first webpage. Let's be a fullstack developer with Hacktiv8.</p>
+    <p>This is my target list:</p>
+    <ol>
+      <li>Being fullstack developer</li>
+      <li>Create a wonderfull website</li>
+    </ol>
 
-			<div>
-				<h1>About Me</h1>
-					<p>
-						<img id="prof_pic" style="max-width:15%" src="images/foto_1.jpg" alt="Irwin Pratajaya"> <br>
-						<table>
-                        <tbody>
-                            <tr>
-                                <td>Nama</td>
-                                <td>:</td>
-                                <td>Irwin Pratajaya</td>
-                            </tr>
-                            <tr>
-                                <td>Alamat</td>
-                                <td>:</td>
-                                <td>Jakarta</td>
-                            </tr>
-                        </tbody>
-                    	</table>
-					</p>
-			</div>
-		<!-- End of Content -->
+    <p>Here is my contact:</p>
+    <ul>
+      <li>Email: irwinpratajaya@gmail.com</li>
+      <li>Phone: +62 838 9800 5028</li>
+    </ul>
+    <p>My Daily Routine</p>
+    <table border="1">
+      <thead>
+        <tr>
+          <th> </th>
+          <th>Morning</th>
+          <th>Afternoon</th>
+          <th>Evening</th>
+          <th>Night</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr colspan="4">  
+          <td>Monday</td>
+          <td colspan="4" rowspan="7" class="mergetable">Eat, Coding, &amp; Sleep</td>
+        </tr>
+        <tr>
+          <td>Tuesday</td>
+        </tr>
+        <tr>
+          <td>Wednesday</td>
+        </tr>
+          <td>Thursday</td>
+        <tr>  
+          <td>Friday</td>
+        </tr>  
+          <td>Saturday</td>
+        <tr>  
+          <td>Sunday</td>
+        </tr>
 
-			<div>
-				<footer>
-				<span class="#">&copy Copyright 2016 <a href="https://irwinpratajaya.github.io"> Irwin Pratajaya </a> </span>
-				</footer>
-			</div>
-		</div>
-	</body>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="comment">
+    <h3>Leave your comment below</h3>
+      <form>
+        <label for="firstname">First name:</label><br>
+        <input type="text" name="firstname"><br>
+        <label for="lastname">Last name:</label><br>
+        <input type="text" name="lastname"><br>
+      
+        <label for="gender">Gender:</label><br>
+          <input type="radio" name="gender" value="male" checked> Male <br>
+          <input type="radio" name="gender" value="female"> Female <br>
+          <input type="radio" name="gender" value="other"> Other <br>
+      
+        <label for="cars">Favorite Cars:</label><br>
+          <select name="cars">
+            <option value="volvo">Volvo</option>
+            <option value="bmw">BMW</option>
+            <option value="audi">Audi</option>
+            <option value="toyota">Toyota</option>
+            <option value="honda">Honda</option>
+          </select>
+          <br>
+        <label for="language">Language Spoken:</label><br>
+          <input type="checkbox" name="language">Bahasa Indonesia<br>
+          <input type="checkbox" name="language">English<br>
+          <input type="checkbox" name="language">Others<br>
+
+        <label for="message">Bio:</label><br>
+          <textarea name="message" rows="10" cols="30"></textarea> <br>
+          <input type="submit">
+      
+      </form>
+    </div>
+
+</body> 
+
 </html>
