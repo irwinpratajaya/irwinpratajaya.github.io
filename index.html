@@ -1,99 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>random</title>
 
-<head>
-  <title>Irwin's Webpage</title>
-  <link href="stylesheet/style.css" rel="stylesheet" type="text/css">
-</head>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/blood.css">
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+	</head>
 
-<body>
-  <div class="header">
-    <h1>Irwin's Webpage</h1>
-    <h2>Welcome Everyone!</h2>
-  </div>
-  <div class="body">
-    <img src="images/garuda.jpg">
-    <p>Hi, I am Irwin and this is my first webpage. Let's be a fullstack developer with Hacktiv8.</p>
-    <p>This is my target list:</p>
-    <ol>
-      <li>Being fullstack developer</li>
-      <li>Create a wonderfull website</li>
-    </ol>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-image="http://s1.picswalls.com/wallpapers/2014/06/22/transformers-wallpaper-hd_110247451_47.jpg">Transformer</section>
+				<section data-background-image="https://www.dramafever.com/st/news/images/ingram_1.jpg">Patlabor</section>
+				<section data-background-image="https://images2.alphacoders.com/749/thumb-1920-74902.jpg">Gundam</section>
+			</div>
+		</div>
 
-    <p>Here is my contact:</p>
-    <ul>
-      <li>Email: irwinpratajaya@gmail.com</li>
-      <li>Phone: +62 838 9800 5028</li>
-    </ul>
-    <p>My Daily Routine</p>
-    <table border="1">
-      <thead>
-        <tr>
-          <th> </th>
-          <th>Morning</th>
-          <th>Afternoon</th>
-          <th>Evening</th>
-          <th>Night</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr colspan="4">  
-          <td>Monday</td>
-          <td colspan="4" rowspan="7" class="mergetable">Eat, Coding, &amp; Sleep</td>
-        </tr>
-        <tr>
-          <td>Tuesday</td>
-        </tr>
-        <tr>
-          <td>Wednesday</td>
-        </tr>
-          <td>Thursday</td>
-        <tr>  
-          <td>Friday</td>
-        </tr>  
-          <td>Saturday</td>
-        <tr>  
-          <td>Sunday</td>
-        </tr>
+		<!-- <script src="lib/js/head.min.js"></script> -->
+		<script src="js/reveal.js"></script>
 
-      </tbody>
-    </table>
-  </div>
+		<script>
+			Reveal.initialize();
+		</script>
 
-  <div class="comment">
-    <h3>Leave your comment below</h3>
-      <form>
-        <label for="firstname">First name:</label><br>
-        <input type="text" name="firstname"><br>
-        <label for="lastname">Last name:</label><br>
-        <input type="text" name="lastname"><br>
-      
-        <label for="gender">Gender:</label><br>
-          <input type="radio" name="gender" value="male" checked> Male <br>
-          <input type="radio" name="gender" value="female"> Female <br>
-          <input type="radio" name="gender" value="other"> Other <br>
-      
-        <label for="cars">Favorite Cars:</label><br>
-          <select name="cars">
-            <option value="volvo">Volvo</option>
-            <option value="bmw">BMW</option>
-            <option value="audi">Audi</option>
-            <option value="toyota">Toyota</option>
-            <option value="honda">Honda</option>
-          </select>
-          <br>
-        <label for="language">Language Spoken:</label><br>
-          <input type="checkbox" name="language" value="indonesia"> Bahasa Indonesia<br>
-          <input type="checkbox" name="language" value="english"> English<br>
-          <input type="checkbox" name="language" value="others"> Others<br>
+		<script src="https://www.gstatic.com/firebasejs/3.7.2/firebase.js"></script>
+		<script src="index.js"></script>
+		<script src="listener.js"></script>
 
-        <label for="message">Bio:</label><br>
-          <textarea name="message" rows="10" cols="30"></textarea> <br>
-          <input type="submit" value="submit">
-      
-      </form>
-    </div>
+		<script type="text/javascript">
+			var statusLeft = false
+			$('.navigate-left').click(function() {
+				statusLeft = true
+				firebase.database().ref('navigate').set({
+				    command: 'left',
+						id: Math.random()
+				});
 
-</body> 
+			})
 
+			var statusRight = false
+			$('.navigate-right').click(function() {
+				statusRight = true
+				firebase.database().ref('navigate').set({
+				    command: 'right',
+						id: Math.random()
+				});
+			})
+		</script>
+	</body>
 </html>
